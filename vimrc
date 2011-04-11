@@ -24,7 +24,9 @@ set number      "add line numbers
 set showbreak=...
 set wrap linebreak nolist
 
-let mapleader = ";"
+let mapleader = ","
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:rubycomplete_rails = 1
 
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
@@ -232,7 +234,7 @@ if has("gui_running")
     if has("gui_gnome")
         set term=gnome-256color
         colorscheme railscasts
-        set guifont=Monospace\ Bold\ 12
+        "set guifont=Monospace\ Bold\ 12
     endif
 
     if has("gui_mac") || has("gui_macvim")
@@ -406,4 +408,3 @@ let g:user_zen_settings = {
   \    'extends' : 'html',
   \  },
  \}
-
