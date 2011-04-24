@@ -68,7 +68,7 @@ set statusline+=\ %P    "percent through file
 set laststatus=2
 
 "turn off needless toolbar on gvim/mvim
-set guioptions-=T
+"set guioptions-=T
 
 "recalculate the trailing whitespace warning when idle, and after saving
 autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
@@ -272,7 +272,7 @@ endif
 " else in your ~/.vimrc file, such as:
 " nmap <silent> <Leader>q <Plug>PeepOpen
 
-silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
+silent! nmap <silent> <Leader>d :NERDTreeToggle<CR>
 nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
 
 "make <c-l> clear the highlight as well as redraw
