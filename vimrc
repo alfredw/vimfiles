@@ -325,6 +325,17 @@ function! s:SetupSnippets()
       endtry
     endif
 
+    "If we're in a play env then read in the play snippets
+    if filereadable("./conf/application.conf")
+      try
+        call ExtractSnips("~/.vim/snippets/play/java", "java")
+        call ExtractSnips("~/.vim/snippets/play/html", "xhtml")
+      catch
+        call ExtractSnips("~/vimfiles/snippets/play/java", "java")
+        call ExtractSnips("~/vimfiles/snippets/play/html", "xthml")
+      endtry
+    endif
+
     try
       call ExtractSnips("~/.vim/snippets/html", "eruby")
       call ExtractSnips("~/.vim/snippets/html", "xhtml")
